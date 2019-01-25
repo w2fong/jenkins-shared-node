@@ -1,0 +1,36 @@
+<com.redhat.jenkins.nodesharingfrontend.SharedNode>
+  <!-- Name of the box for description purposes -->
+  <name>10.241.4.211</name>
+  <!-- Jenkins home dir -->
+  <remoteFS>c:\jenkins</remoteFS>
+  <!-- Must be one -->
+  <numExecutors>1</numExecutors>
+  <launcher class="hudson.slaves.JNLPLauncher" plugin="ssh-slaves@1.21">
+    <host></host>
+    <port>22</port>
+    <!-- This credential ID must be present on all Executor Jenkinses! -->
+    <credentialsId>shared_ssh_creds</credentialsId>
+    <javaPath>/path/to/java</javaPath>
+    <launchTimeoutSeconds>600</launchTimeoutSeconds>
+    <maxNumRetries>0</maxNumRetries>
+    <retryWaitTime>0</retryWaitTime>
+  </launcher>
+  <!-- Labels the shared not will provide to builds. -->
+  <label>vs2017ng</label>
+</com.redhat.jenkins.nodesharingfrontend.SharedNode>
+
+<com.redhat.jenkins.nodesharingfrontend.SharedNode>
+  <name>10.241.4.211</name>
+  <remoteFS>c:\jenkins</remoteFS>
+  <numExecutors>1</numExecutors>
+  <launcher class="hudson.slaves.JNLPLauncher">
+    <host></host>
+    <port>22</port>
+    <credentialsId></credentialsId>
+    <javaPath>/path/to/launcher</javaPath>
+    <launchTimeoutSeconds>600</launchTimeoutSeconds>
+    <maxNumRetries>0</maxNumRetries>
+    <retryWaitTime>0</retryWaitTime>
+  </launcher>
+  <label>vs2017test</label>
+</com.redhat.jenkins.nodesharingfrontend.SharedNode>
