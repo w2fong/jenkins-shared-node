@@ -1,0 +1,7 @@
+<com.redhat.jenkins.nodesharingfrontend.SharedNode>
+  <name>10.241.4.211</name>
+  <remoteFS>c:\jenkins</remoteFS>
+  <numExecutors>1</numExecutors>
+  <launcher class="hudson.slaves.JNLPLauncher"/>
+  <label>vs2017test</label>
+</com.redhat.jenkins.nodesharingfrontend.SharedNode>
